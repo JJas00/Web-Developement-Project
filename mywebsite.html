@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background-image: url('./pexels-photo-169573.jpeg');
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-image: url('./pexels-photo-169573.jpeg');
+  background-color: whitesmoke;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 65%;
+  
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 35%;
+  padding-left: 5px;
+
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 20px;
+
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: whitesmoke;
+   padding: 30px;
+   margin-top: 20px;
+  
+   
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/* Footer */
+.footer {
+  
+  padding: 20px;
+  text-align: center;
+  
+  overflow: hidden;
+  margin-left: 500px;
+}
+
+.container {
+    margin-top: 20px;
+    margin-left: 600px;
+    height: 40%;
+    width:50%;
+    padding: 50px;
+    position:relative;
+    background-color: whitesmoke;
+    text-align: center;
+    align-items: center;
+    padding-left: 50px;
+    
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2><i><b>JaSwAnTh JeRrIpOtHuLa</b></i></h2>
+  <div style="margin-left: 40%;
+                    margin-top: 1.5%;
+                    font-size: 20px;
+                    color: rgb(116, 42, 8);"> My OwN CoDiNg WebSiTe</div>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h3>ABOUT</h3>
+      <div><img src="/Users/jaswanthjerripothula/Desktop/Lammasingi trip/IMG_2412.JPG" style="height: 50%; width: 50%"></div></img></div>
+      <p> $ Education             : B. Tech in Computer Science and Engineering</p>
+      <p> $ University            : Ms Ramaiah University of Applied Sciences, Bangalore</p>
+      <p> $ Internships           : iGreeks Technologies and VERZEO</p>
+      <p> $ Seminar and Workshops : Shape AI (AWS) and Intel</p>
+
+    </div>
+    <div class="card">
+      <h3>SKILLS</h3>
+      <h5>Title description, April 25, 2021</h5>
+      <div><img src = "expert-talk-data-science-data-analytics-machine-learning.jpeg" style="height: 40%; width:30%"></img></div><br>
+
+      <h5>Coding Skills.....</h5>
+      <p> * Python, C, Java, DS Algorithms and MySql database</p>
+      <p> * HTML, CSS and JS - Web Development </p>
+      <p> * Machine Learning, Data Science</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>PROJECTS</h3>
+      <h5>Web Development : </h5>
+          <p>Landing page development using HTML, CSS and JS</p>
+      <h5>Data Science and Machine Learning :  </h5>
+           <p>Project 1: HamSpam Dectection</p>
+           <p>Project 2: Heart Disease Prediction and Survey</p>
+           <p>Project 3: IMDB Reviews</p>
+           <p>Project 4: Flight Statistics Representations</p>
+           <p>Project 5: NETFLIX films ratings and stats</p>
+        <h5>Frontend development : </h5>
+            <p>Project 1: Hospital Login Page</p>
+            <p>Project 2: YouTube Open Diverting Page </p>
+            <p>Project 3: Company Website</p>
+   
+    </div>
+    <div class="card">
+      <h3>CERTIFICATES</h3>
+      <div><img src = "1.png" style="width: 70%; display:block"><h4>International E-Workshop</h4> </img></div><br>
+      <div><img src = "2.png" style="width: 70%; display:block"><h4>Machine Learning</h4></img></div><br>
+      <div><img src = "3.png" style="width: 70%; display:block"><h4>Angular JS Workshop</h4></img></div><br>
+
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+        <a href= "https://www.instagram.com/_its_me_jash_/">Instagram : _its_me_jash_</a>
+        <a href= "https://github.com/JJas00">github : JJas00</a>
+        <a href= "https://twitter.com/JaswanthJerrip2">Twitter : Jaswanth J</a>
+    </div>
+      
+  </div>
+</div>
+<div class="container">  
+    <form id="suggestion_box" action="" method="post">
+      <h3><b>***************Suggestion Box*****************</b></h3>
+      <h4>Question of the month :- </h4>
+      <p>Here comes the question.....?</p>
+      <h5>Or General improvement ideas</h5>
+      <fieldset>
+        <textarea placeholder="Suggestion" tabindex="10" name="suggestion_text" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="suggestion_box" data-submit="...Sending" value="text to send">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+
+
+<div class="footer">
+    <img src="/Users/jaswanthjerripothula/Desktop/notebooks-coffee-macbook-code-wallpaper-preview.jpeg" style="height: 200%; width:100%"></img>
+</div>
+<div class="footer">
+    <h2><b>Contact        :: 7997117198</b></h2>
+    <h2><b>Mail ID        :: jaswanthjerripothula00@gmail.com</b></h2>
+    <h2><b>Telegram ID    :: jaswanthJ07</b></h2>
+    
+  </div>
+  
+<div class="footer">
+    <h1><i><b>THANK YOU !</b></i></h1>
+    <p><b>@Copyrights of this page are reserved</b></p>
+</body>
+</html>
