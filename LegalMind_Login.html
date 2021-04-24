@@ -1,0 +1,99 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <title>LegalMind</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="./index.js"></script>
+    </head>
+  
+  <body>
+    <div class="container" style="flex-direction:column; height: 100vh; background-color: #2f3fb1;">
+        <section>
+            <Center style="margin-top: 10%;">
+                <label style="color: white; font-size:3.2rem; font-weight: 900;">Redefine legal research with <br />AI </label>
+            </Center>
+            <Center style="margin-top: 5px;">
+                <label style="color: white; font-size:1.2rem; font-weight:400; font-style:Montserrat;">Use proprietary algorithms to find the most influential insights and the strongest authorities to cite. <br />
+                    Trusted by 730+ legal professionals in India.
+                </label>
+            </Center>
+        </section>
+
+        <section>
+            <form onsubmit="validateForm()">
+                <div class="container" style="flex-direction: column;"> 
+                    <div class="row" style="margin-bottom: 0px">
+                        <div class="column">
+                            <input id="firstname" type="text" placeholder="First Name" style="
+                            width: 20vw;
+                            border-radius: 10px;
+                            height: 36px;
+                            border-color: white;"
+                        />
+                        </div>
+                        <div class="column">
+                            <input id="lastname" type="text" placeholder="Last Name" style="
+                            width: 20vw;
+                            border-radius: 10px;
+                            height: 36px;
+                            border-color: white;"/>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0px; margin:auto">
+                        <div class="column">
+                            <input id="email" type="text" placeholder="Email" style="
+                            width: 40vw;
+                            border-radius: 10px;
+                            height: 36px;
+                            border-color: white;
+                            margin-top: 0px;"
+                        />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 0px">
+                        <div class="column">
+                            <input type="submit" value="Submit" style="
+                            width: 5vw;
+                            border-radius: 10px;
+                            height: 36px;
+                            color: white;
+                            border-color: #0062cc;
+                            background-color: #0069d9;"
+                        />
+                        </div>
+                        <div class="column">
+                            <input type="button" value="Reset" placeholder="Last Name" style="
+                            width: 5vw;
+                            border-radius: 10px;
+                            height: 36px;
+                            color: white;
+                            border-color: #0062cc;
+                            background-color: #0069d9;"
+                            onclick="resetContent()"
+                            />
+                        </div>
+                    </div>    
+                </div>
+            </form>
+        </section>
+        
+            
+    </div>      
+    <div class="footer" style="flex:1">
+        <div class="footer-header"><h2 style="color:#0056b3; font-weight: 200; margin: auto; margin-top: 30px;">Featured In</h2></div>
+
+        <div class="brands" style="background-color: white; ">
+            <img id="businesstoday" class="brand" /> 
+            <img id="lawcom" class="brand" />
+            <img id="parambh" class="brand"  />
+            <img id="barandbench" class="brand" />
+        </div>
+
+        <div class="footer-trademark">
+            <p>© 2020 FindMind Analytics Pvt. Ltd.</p>
+        </div>
+    </div>  
+  
+  </body>
+  </html>
