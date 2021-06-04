@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - RedStore</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+<body>
+    <form action="index.html" method="post">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/MyBlog/source/index.html"><img src="./images/logo.png" class="logo-icon"
+                        width="125px"></a>
+
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/MyBlog/source/index.html">Home</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/MyBlog/source/products.html">Products</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/MyBlog/source/index.html">About</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/MyBlog/source/index.html">Contact</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/MyBlog/source/account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="./images/cart.png" class="cart-icon" width="30px" height="30px">
+                <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+        <!-------------account page------------>
+        <div class="account-page">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btt"></div>
+                    <button id="login-button" type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button id="register-button" type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <form id="login" class="input-group">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn" onclick="btnClicked()">Log In</button>
+                </form>
+                <form id="register" class="input-group">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="email" class="input-field" placeholder="Email Id" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="password" class="input-field" placeholder="Re-Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+            
+        </div>
+        <!-------------Footer------------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our App</h3>
+                        <p>Download App for Android and iOS mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="./images/play-store.png">
+                            <img src="./images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="./images/logo-white.png">
+                        <p>Our Purpose is To Sustainably Make the Pleasure and Benefits of Sports Accesible to the Many.
+                        </p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Afflaits</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Me</h3>
+                        <ul>
+                            <li><a href="https://twitter.com/JaswanthJerrip2">Twitter</a></li>
+                            <li><a href="https://github.com/JJas00">GitHub</a></li>
+                            <li><a href="https://www.instagram.com/_its_me_jash_/">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/jerripothula.jaswanth/">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/in/jaswanth-jerripothula-07/">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">@Copyright 2021 - Jaswanth Jerripothula (28th May)</p>
+            </div>
+        </div>
+    </form>
+    <script src="./script.js" ></script>
+</body>
+
+</html>
