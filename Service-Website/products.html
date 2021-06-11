@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Retail&ServiceProvider</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Poppins',sans-serif;
+
+        
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+    nav{
+        flex: 1;
+        text-align: right;
+    }
+    nav ul{
+        display: inline-block;
+        list-style-type: none;
+        transition: transform 0.5s;
+    }
+    nav ul li:hover{
+        transform: translateY(-5px);
+    }
+    nav ul li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .logo-icon{
+        cursor: pointer;
+    }
+    .menu-icon{
+        width: 25px;
+        margin-left: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s;
+    }
+    .menu-icon:hover{
+        transform: translateY(-5px);
+    }
+    .container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    }
+
+
+    .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    }
+    .col-4{
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+        transition: transform 0.5s;
+    }
+    .col-4 img{
+        width: 100%;
+    }
+    .title{
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+    }
+    .title::after{
+        content: '';
+        background: #ff523b;
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h4{
+        color: #555;
+        font-weight: normal;
+    }
+    .col-4 p{
+        font-size: 14px;
+
+    }
+
+    .rating .fa{
+        color: #ff523b;
+
+    }
+    .col-4:hover{
+        transform: translateY(-5px);
+        cursor: pointer;
+    }
+    .row-2{
+    justify-content: space-between;
+    margin: 50px auto 50px;
+    }
+    select{
+        border: 1px solid #ff523b;
+        padding: 5px;
+        cursor: pointer;
+    }
+    select:focus{
+        outline: none;
+    }
+
+    .page-btn{
+        margin: 0 auto 80px;
+    }
+    .page-btn span{
+        display: inline-block;
+        border: 1px solid #ff523b;
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .page-btn span:hover{
+        background: #ff523b;
+        color: white;
+    }
+    .footer{
+ 
+        background:black;
+        color:grey;
+        font-size: 14px;
+        padding: 60px 0 20px;
+    }
+    .footer p{
+        color: #8a8a8a;
+        margin-left: 5px;
+        font-size: 16px;
+    }
+    .footer h3{
+        color: white;
+        margin-bottom: 20px;
+    }
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+    .footer-col-1{
+        flex-basis: 30%;
+    }
+    .footer-col-2{
+        flex:1;
+        text-align: center;
+    }
+    .footer-col-2 img{
+        width: 180px;
+        margin-bottom: 20px;
+    }
+    .footer-col-3, .footer-col-4{
+        flex-basis: 12%;
+        text-align: center;
+        cursor: pointer;
+    }
+    ul{
+        list-style-type: none;
+        color:grey;
+    }
+    .app-logo{
+        margin-top: 20px;
+    }
+    .app-logo img{
+        width: 140px;
+    }
+    .footer ul li a{
+        color: grey;
+
+    }
+    .footer .hr{
+        border: none;
+        background: #b5b5b5;
+        height: 1px;
+        margin: 20px 0;
+    }   
+    .copyright{
+        text-align: center;
+    }
+    /*------ media query for menu for less than 800px-----*/
+    @media only screen and (max-width: 800px){
+        nav ul{
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: #333;
+            width: 100%;
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+        nav ul li{
+            display: block;
+            margin-right: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        nav ul li a{
+            color: white;
+        }
+        .menu-icon{
+            display: block;
+            cursor: pointer;
+        }
+    }
+    @media only screen and (max-width: 600px){
+        .row{
+            text-align: center;
+        }
+        .col-2, .col-3, .col-4{
+            flex-basis: 100%;
+        }
+    }
+    </style>
+    
+</head>
+<body>
+    <!--------Header---------->
+    <form action="index.html" method="post">
+        <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/index.html"><img src="./images/logo.png" class= "logo-icon" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/index.html">Home</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/products.html">Products</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/services.html">Services</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/index.html">Contact</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href=""><img src="./images/cart.png" class= "cart-icon" width="30px" height="30px"></a>
+                <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+        </div>>
+
+        <!---------Products--------------->
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>All Products</h2>
+                <select name="" id="">
+                    <option value="">Default Sorting</option>
+                    <option value="">Sort by price</option>
+                    <option value="">Sort by popularity</option>
+                    <option value="">Sort by rating</option>
+                    <option value="">Sort by sale</option>
+                </select>
+            </div>
+            <div class="small-container">
+                <h2 class="title">Featured Products</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/41hVTmJVCWL.jpg">
+                        <h4>INTERGLIDE Sliding Gate Motor - 375W + Standard Fixtures + RF Remote-2 nos + Metal Rack of 1005MM - 4 Nos</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>$50.00</p>
+                        <ul>
+                            <li>
+                                <li><a href="">&#8594;</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://5.imimg.com/data5/QR/QN/OT/SELLER-836615/automatic-curtain-500x500.jpg">
+                        <h4>
+                            IndiaTechShop Aluminium Linear Curtain Motor - Automated Curtains</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p>$100.00</p>
+                        <ul>
+                            <li>
+                                <li><a href="">&#8594;</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71pXEHHBWQL._SL1500_.jpg">
+                        <h4>
+                            Deco Window Polyester & Polyester Blend Solid Roller Blinds, 58 X 84 Inch, Red</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>$30.00</p>
+                        <ul>
+                            <li>
+                                <li><a href="">&#8594;</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/31HLdtVEeTL.jpg">
+                        <h4>Entero Systems India Automatic Boom Barrier (3 m)</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>$55.00</p>
+                        <ul>
+                            <li>
+                                <li><a href="">&#8594;</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81sZ3sZ6FNS._SX679_.jpg">
+                        <h4>HIPPO - HDPE Fabric - Pre-Assembled Roller Shade Blinds with Crank Handle(Wall Mount) - 95% Sun & UV Blockage (4 FT X 9 FT, Persian Beige)</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>$35.00</p>
+                        <ul>
+                            <li>
+                                <li><a href="">&#8594;</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51rWAujwW6L._SL1001_.jpg">
+                        <h4>U-Groove Wheel, 60 Type 100KG Maximum Load Metal White Sliding Door Window Light Track Industrial Conveyor Guiding Pulley for Automated Industry</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>$65.00</p>
+                        <ul>
+                            <li>
+                                <li><a href="">&#8594;</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/61RvlOB40zL._SX679_.jpg">
+                        <h4>Godrej Locks C071 2 Speed Hydraulic 60kg Door Closer (Silver)Mounting on door panel or door frame ; Type: Lock ; Maximum Closing Moment: 14Nm ; Door Opening Angle : 180°</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>$55.00</p>
+                        <ul>
+                            <li>
+                                <li><a href="">&#8594;</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/61Llat4Yy5L._SL1200_.jpg">
+                        <h4>On Automation Road Barriers (BR401A.24) 24V for intensive use for 3, 4 or 5 meters arms With 2 Remotes and Led lights, 100% ITALIAN MADE
+                        </h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>$55.00</p>
+                        <ul>
+                            <li>
+                                <li><a href="">&#8594;</a></li>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+                <!------Footer--------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our App</h3>
+                        <p>Download App for Android and iOS mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="./images/play-store.png">
+                            <img src="./images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="./images/logo.png">
+                        <p>Our Purpose is To Sustainably Make the Pleasure and Benefits of automation retailing and service Accesible to the Many.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Afflaits</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Me</h3>
+                        <ul>
+                            <li><a href="https://myportfolio-jaswanth-jerripothula.netlify.app">Portfolio</a></li>
+
+                            <li><a href="https://twitter.com/JaswanthJerrip2">Twitter</a></li>
+                            <li><a href="https://github.com/JJas00">GitHub</a></li>
+                            <li><a href="https://www.instagram.com/_its_me_jash_/">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/jerripothula.jaswanth/">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/in/jaswanth-jerripothula-07/">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">@Copyright reserved 2021</p>
+            </div>
+        </div>
+    </form>

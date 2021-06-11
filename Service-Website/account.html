@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - RedStore</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Poppins',sans-serif;
+        background-image: url('https://images.unsplash.com/photo-1617113937231-7942715f868e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80');
+        background-position: center;
+        background-repeat: inherit;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+    nav{
+        flex: 1;
+        text-align: right;
+    }
+    nav ul{
+        display: inline-block;
+        list-style-type: none;
+        transition: transform 0.5s;
+    }
+    nav ul li:hover{
+        transform: translateY(-5px);
+    }
+    nav ul li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .logo-icon{
+        cursor: pointer;
+    }
+    .menu-icon{
+        width: 25px;
+        margin-left: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s;
+    }
+    .menu-icon:hover{
+        transform: translateY(-5px);
+    }
+    .container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    }
+
+    .header .row{
+        margin-top: 200px;
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer{
+        margin-top: 70px;
+        background:black;
+        color:grey;
+        font-size: 14px;
+        padding: 60px 0 20px;
+    }
+    .footer p{
+        color: #8a8a8a;
+        margin-left: 5px;
+        font-size: 16px;
+    }
+    .footer h3{
+        color: white;
+        margin-bottom: 20px;
+    }
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+    .footer-col-1{
+        flex-basis: 30%;
+    }
+    .footer-col-2{
+        flex:1;
+        text-align: center;
+    }
+    .footer-col-2 img{
+        width: 180px;
+        margin-bottom: 20px;
+    }
+    .footer-col-3, .footer-col-4{
+        flex-basis: 12%;
+        text-align: center;
+        cursor: pointer;
+    }
+    ul{
+        list-style-type: none;
+        color:grey;
+    }
+    .app-logo{
+        margin-top: 20px;
+    }
+    .app-logo img{
+        width: 140px;
+    }
+    .footer ul li a{
+        color: grey;
+
+    }
+    .footer .hr{
+        border: none;
+        background: #b5b5b5;
+        height: 1px;
+        margin: 20px 0;
+    }   
+    .copyright{
+        text-align: center;
+    }
+
+    .account-page{
+        padding: 50px 0;
+       
+    }
+    .form-box{
+        width: 380px;
+        height: 480px;
+        position: relative;
+        margin: 6% auto;
+        background: #fff;
+        padding: 5px;
+        border-radius: 50px;
+        opacity: 0.8;
+        overflow: hidden;
+    }
+    .button-box{
+        width: 220px;
+        margin: 35px auto;
+        position: relative;
+        box-shadow: 0 0 20px 9px #ff61241f ;
+        border-radius: 30px;
+    }
+    .toggle-btn{
+        padding: 10px 30px;
+        cursor: pointer;
+        background: transparent;
+        border:0;
+        outline: none;
+        position: relative;
+    }
+    #btt{
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        width: 110px;
+        background: linear-gradient(to right,#ff105f,#ffad06);
+        border-radius: 30px;
+        transition: transform 1s;
+    }
+    .input-group{
+        top: 180px;
+        position: absolute;
+        width: 280px;
+        transition: transform 1s;
+    }
+    .input-field{
+        width: 100%;
+        padding: 10px 10px;
+        margin: 5px 0;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #999;
+        outline: none;
+        background: transparent;
+        border-radius: 30px;
+        line-height: 10px;
+    }
+    .submit-btn{
+        width: 50%;
+        padding: 10px 30px;
+        cursor: pointer;
+        display: block;
+        background: linear-gradient(to right,#ff105f,#ffad06);
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+        margin: inherit;
+    }
+    .check-box{
+        margin: 30px 10px 30px 0;
+    }
+    span{
+        color: #777;
+        font-size: 12px;
+        bottom: auto;
+        position: relative;
+    }
+    #login{
+        left: 50px;
+    }
+    #register{
+        left: 450px;
+    }
+    @media only screen and (max-width: 800px){
+        nav ul{
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: #333;
+            width: 100%;
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+        nav ul li{
+            display: block;
+            margin-right: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        nav ul li a{
+            color: white;
+        }
+        .menu-icon{
+            display: block;
+            cursor: pointer;
+        }
+    }
+    @media only screen and (max-width: 600px){
+        .row{
+            text-align: center;
+        }
+        .col-2, .col-3, .col-4{
+            flex-basis: 100%;
+        }
+    }
+    </style>
+    
+
+<body>
+    <form action="index.html" method="post">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/index.html"><img src="./images/logo.png" class="logo-icon"
+                        width="125px"></a>
+
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/index.html">Home</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/products.html">Products</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/services.html">Services</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/index.html">Contact</a></li>
+                        <li><a href="file:///Users/jaswanthjerripothula/Desktop/WDProjects/ServiceWebsite/account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="./images/cart.png" class="cart-icon" width="30px" height="30px">
+                <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+        <!-------------account page------------>
+        <div class="account-page">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btt"></div>
+                    <button id="login-button" type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button id="register-button" type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <form id="login" class="input-group">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn" onclick="btnClicked()">Log In</button>
+                </form>
+                <form id="register" class="input-group">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="email" class="input-field" placeholder="Email Id" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="password" class="input-field" placeholder="Re-Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+            
+        </div>
+        <!-------------Footer------------->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our App</h3>
+                        <p>Download App for Android and iOS mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="./images/play-store.png">
+                            <img src="./images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="./images/logo.png">
+                        <p>Our Purpose is To Sustainably Make the Pleasure and Benefits of automation retailing and service Accesible to the Many.
+                        </p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Afflaits</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Me</h3>
+                        <ul>
+                            <li><a href="https://myportfolio-jaswanth-jerripothula.netlify.app">Portfolio</a></li>
+
+                            <li><a href="https://twitter.com/JaswanthJerrip2">Twitter</a></li>
+                            <li><a href="https://github.com/JJas00">GitHub</a></li>
+                            <li><a href="https://www.instagram.com/_its_me_jash_/">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/jerripothula.jaswanth/">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/in/jaswanth-jerripothula-07/">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">@Copyright reserved 2021 </p>
+            </div>
+        </div>
+    </form>
+    <script src="./script.js" ></script>
+</body>
+
+</html>

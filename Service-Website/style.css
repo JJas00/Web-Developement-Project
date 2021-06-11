@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    background-image: url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/NL0L5N5Rgimkt8edi/videoblocks-apartment-repair-in-the-room-two-men-workers-measuring-an-area-with-big-window_bbmy6uhali_thumbnail-1080_01.png');
+    background-position: center ;
+    background-repeat: no-repeat;
+    
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    transition: transform 0.5s;
+}
+nav ul li:hover{
+    transform: translateY(-5px);
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.logo-icon{
+    cursor: pointer;
+}
+.menu-icon{
+    width: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+.menu-icon:hover{
+    transform: translateY(-5px);
+}
+
+p{
+    color: black ;
+    margin-left: 70px;
+    font-size: 20px;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header .row{
+    margin-top: 200px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 60%;
+    min-width: 700px;
+}
+
+.col-2 h1{
+    font-size: 40px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: #ff763bd2;
+    color: white;
+    padding: 15px 20px;
+    margin-left: 70px;
+    margin-top: 70px;
+    border-radius: 80px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: #563434;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----------footer-----------------*/
+
+.footer{
+    margin-top: 200px;
+    background:black;
+    color:grey;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+    margin-left: 5px;
+    font-size: 16px;
+}
+.footer h3{
+    color: white;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex:1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+    color:grey;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer ul li a{
+    color: grey;
+
+}
+
+.footer .hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}   
+.copyright{
+    text-align: center;
+}
+
+
+/*------ media query for menu for less than 800px-----*/
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 1s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+}
