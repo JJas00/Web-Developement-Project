@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap">
+    <link rel="stylesheet" href="/style.e308ff8e.css">
+<script src="/style.e308ff8e.js"></script></head>
+<body>
+    <div>
+        <h1>Enter Your Article</h1>
+        <br>
+        <textarea id="words" cols="50" rows="10"></textarea>
+        <br>
+        <p id="showdata"></p>
+        <br>
+        <button onclick="countwords()">Count Character</button>
+    </div>
+    
+</body>
+<script>function countwords() {
+  var no_of_char = document.getElementById('words').value.length;
+  document.getElementById('showdata').innerHTML = "The Total Characters in the Article = " + no_of_char;
+  alert("The Total Character in the Article = " + no_of_char);
+}</script>
+</html>
